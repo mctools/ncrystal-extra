@@ -1,8 +1,9 @@
 NCMAT v2beta
 #
 # Heavy water (D2O) based on ENDF/B-VIII.0 scattering kernels by J.I. Marquez
-# Damian, et. al. (see below for references). If pressure is not 1atm, the
-# density value below should likely be modified.
+# Damian, et. al. (see below for references). Please check the @DENSITY
+# carefully below, as the density of liquid water depends on the material
+# pressure.
 #
 # Notice: This NCMAT file is valid at T=550.0K only. Other files alternatively provide
 # the same material at temperatures:
@@ -12,7 +13,7 @@ NCMAT v2beta
 #       623.6K
 #
 # In case your local installation does not provide all these files, they can be
-# downloaded from: https://github.com/mctools/ncrystal-extra/tree/develop/data
+# downloaded from: https://github.com/mctools/ncrystal-extra/tree/master/data
 #
 @DENSITY
   #NB: Density depends on pressure (value here from P.G., MacMillan, et. al. (1981),
