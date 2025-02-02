@@ -24,8 +24,8 @@ jobs:
     - name: Install plugin
       run: pip install ./src/pypkgs/ncrystal-plugin-WaterData
 
-    - name: Install ncrystal-python
-      run: pip install "ncrystal-python>=3.9.86"
+    - name: Install ncrystal
+      run: pip install "ncrystal>=3.9.86"
 
     - name: Verify plugin loading
       run: ncrystal-pluginmanager --test WaterData
