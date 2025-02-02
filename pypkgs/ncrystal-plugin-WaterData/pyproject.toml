@@ -1,6 +1,6 @@
 [project]
 name = "ncrystal-plugin-WaterData"
-description = "Extra NCMAT data files for light and heavy water, covering a wider range of temperatures compared to what is found in the NCrystal standard library."
+description = "Extra NCMAT data files for light and heavy water."
 version = "0.0.3"
 dependencies = [ "ncrystal-pypluginmgr>=0.0.5" ]
 readme = "README.md"
