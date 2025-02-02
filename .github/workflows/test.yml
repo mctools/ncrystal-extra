@@ -28,9 +28,9 @@ jobs:
       run: pip install ./src/pypkgs/ncrystal-plugin-WaterData
 
     - name: Install ncrystal
-      run: pip install "ncrystal-python>=3.9.86" "ncrystal-core>=3.9.86"
+      run: pip install "ncrystal-python>=3.9.87" "ncrystal-core>=3.9.87"
     #FIXME: Update to simply:
-    # run: pip install "ncrystal>=3.9.86"
+    # run: pip install "ncrystal>=3.9.87"
 
     - name: pip list
       run: pip list
