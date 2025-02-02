@@ -7,7 +7,7 @@ temperatures compared to what is found in the NCrystal standard library.
 
 After installation, use for instance `nctool --browse` to see the provided file
 names. For instance, to use heavy water at 10C, one would use a cfg-string like
-`"plugins::water/LiquidHeavyWaterD2O_T283.6K.ncmat"`.
+`"plugins::WaterData/LiquidHeavyWaterD2O_T283.6K.ncmat"`.
 
 The data files were based on ENDF/B-VIII.0 CAB scattering kernels, which are
 described in:

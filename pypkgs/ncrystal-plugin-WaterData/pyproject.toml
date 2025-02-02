@@ -1,7 +1,7 @@
 [project]
 name = "ncrystal-plugin-WaterData"
 description = "Extra NCMAT data files for light and heavy water."
-version = "0.0.3"
+version = "0.0.4"
 dependencies = [ "ncrystal-pypluginmgr>=0.0.5" ]
 readme = "README.md"
 license = {file = "LICENSE"}
