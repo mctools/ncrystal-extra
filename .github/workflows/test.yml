@@ -21,6 +21,9 @@ jobs:
       with:
         path: src
 
+    - name: Pre check
+      run: python ./src/devel/check.py
+
     - name: Install plugin
       run: pip install ./src/pypkgs/ncrystal-plugin-WaterData
 
