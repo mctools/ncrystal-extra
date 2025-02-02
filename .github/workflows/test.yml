@@ -24,8 +24,11 @@ jobs:
     - name: Pre check
       run: python ./src/devel/check.py
 
-    - name: Install plugin
+    - name: Install plugins
       run: pip install ./src/pypkgs/ncrystal-plugin-WaterData
+
+    - name: Install plugins
+      run: pip install ./src/pypkgs/ncrystal-plugin-UraniumOxideData
 
     - name: Install ncrystal
       run: pip install "ncrystal-python>=3.9.87" "ncrystal-core>=3.9.87"
@@ -38,8 +41,14 @@ jobs:
     - name: pip check
       run: pip check
 
-    - name: Verify plugin loading
+    - name: Verify WaterData plugin loading
       run: ncrystal-pluginmanager --test WaterData
 
-    - name: Use data file explicitly
+    - name: Use WaterData data file explicitly
       run: nctool -d 'plugins::WaterData/LiquidHeavyWaterD2O_T350.0K.ncmat'
+
+    - name: Verify UraniumOxideData plugin loading
+      run: ncrystal-pluginmanager --test UraniumOxideData
+
+    - name: Use UraniumOxideData data file explicitly
+      run: nctool -d 'plugins::UraniumOxideData/UO2_sg225_UraniumOxide_vdos900K.ncmat'

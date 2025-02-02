@@ -14,14 +14,19 @@ def check_identical_files( f1, f2 ):
 
 def check_identical_files_in_dirs( d1, d2, pattern ):
     def get_files(d):
-        return set([ f for f in d1.iterdir()
-                     if ( f.is_file() and
-                          ( pattern is None or fnmatch.fnmatch(f,pattern) )
-                         )
-                    ])
+        fs = set([ f for f in d1.iterdir()
+                   if ( f.is_file() and
+                        ( pattern is None or fnmatch.fnmatch(f.name,pattern) )
+                       )
+                  ])
+        if not fs:
+            raise SystemExit(f"Checking no files in dir {d} "
+                             f"with pattern {repr(pattern)}.")
+        return fs
 
     files1 = get_files(d1)
     files2 = get_files(d2)
+
     if files1-files2:
         raise SystemExit(f'Missing in {d2}: {files1-files2}')
     if files2-files1:
@@ -36,13 +41,30 @@ def check_copies():
                                               'src',
                                               'ncrystal_plugin_WaterData',
                                               'data')
+    plugdatadir_uo2 = reporoot.joinpath('pypkgs',
+                                        'ncrystal-plugin-UraniumOxideData',
+                                        'src',
+                                        'ncrystal_plugin_UraniumOxideData',
+                                        'data')
+
     check_identical_files_in_dirs( reporoot.joinpath('data','validated'),
                                    plugdatadir_waterdata,
                                    pattern = '*Water*.ncmat')
+
+    check_identical_files_in_dirs( reporoot.joinpath('data','validated'),
+                                   plugdatadir_uo2,
+                                   pattern = 'UO2*.ncmat')
+
     check_identical_files( reporoot.joinpath('LICENSE'),
                            reporoot.joinpath('pypkgs',
                                              'ncrystal-plugin-WaterData',
                                              'LICENSE' ) )
+
+    check_identical_files( reporoot.joinpath('LICENSE'),
+                           reporoot.joinpath('pypkgs',
+                                             'ncrystal-plugin-UraniumOxideData',
+                                             'LICENSE' ) )
+
 
 
 def main():
