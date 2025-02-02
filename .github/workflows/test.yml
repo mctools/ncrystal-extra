@@ -29,6 +29,12 @@ jobs:
     #FIXME: Update to simply:
     # run: pip install "ncrystal>=3.9.86"
 
+    - name: pip list
+      run: pip list
+
+    - name: pip check
+      run: pip check
+
     - name: Verify plugin loading
       run: ncrystal-pluginmanager --test WaterData
 
