@@ -1,7 +1,7 @@
 # Extra data files for NCrystal
 
 Extra data files for NCrystal, supplementing those files which are part of the
-main repository (at https://github.com/mctools/ncrystal/tree/master/data).
+main repository (at https://github.com/mctools/ncrystal/tree/HEAD/data).
 
 * Files in the [validated/](validated/) subdirectory are believed to be of similar good
   quality as those in the main repository, and are kept here instead due to

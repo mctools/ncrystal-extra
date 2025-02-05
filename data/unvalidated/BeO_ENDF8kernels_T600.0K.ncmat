@@ -11,7 +11,7 @@ NCMAT v2
 #       293.6K 400.0K 500.0K 700.0K 800.0K 1000.0K 1200.0K
 #
 # In case your local installation does not provide all these files, they can be
-# downloaded from: https://github.com/mctools/ncrystal-extra/tree/master/data
+# downloaded from: https://github.com/mctools/ncrystal-extra/tree/HEAD/data
 #
 #Lattice parameters, crystal structure, and Debye temperatures based on:
 #
